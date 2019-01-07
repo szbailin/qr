@@ -12,7 +12,7 @@ return [
 	// 视图输出字符串内容替换
 	'view_replace_str'       => [
 		//修改成自己的 " 域名 "
-	    '__PUBLIC__' => 'http://www.pay.com/static/',
+	    '__PUBLIC__' => 'https://qr.52ecy.cn/static/',
 	],
 
 	// 站点标题
@@ -28,10 +28,10 @@ return [
 	'keywords' => '',
 
 	// 二维码识别接口
-	'distinguish' => 'http://i.911s.cn/code/scan/analysis?url=',
+	'distinguish' => 'https://ii.911s.cn/api/qra.php?url=',
 
 	// 识别结果截取正则
-	'reg' => '/{"txt":"(.*?)"/',
+	'reg' => '/"qrurl":"(.*?)"/',
 
 	// 二维码生成接口
 	'generate' => 'http://qr.liantu.com/api.php?w=600&text=',
