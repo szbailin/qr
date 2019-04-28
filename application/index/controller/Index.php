@@ -57,6 +57,8 @@ class Index extends Controller{
             unset($info);
             @$url = file_get_contents(config('distinguish').config('view_replace_str.__PUBLIC__').$name);
             @unlink($path.$name);
+         	preg_match(config('reg'), $url, $match);
+        	$url = isset($match[1]) ? stripslashes($match[1]) : '';
             if (!$url) {
                 return [ 'status' => 1, 'msg' => '二维码识别失败' ];
             }
